@@ -1,0 +1,44 @@
+/*
+ *  RAA_Prefix.pch
+ *  RAA
+ *
+ *  Created by Rowan James on 5/12/10.
+ *  Copyright 2010 Rowan James. All rights reserved.
+ *
+ */
+
+#ifdef __cplusplus
+
+#import <Foundation/Foundation.h>
+
+#import <boost/program_options.hpp>
+using namespace boost::program_options;
+
+#define BOOST_FILESYSTEM_VERSION 3
+#import <boost/filesystem.hpp>
+using namespace boost::filesystem;
+
+#import <string>
+using std::string;
+#import <vector>
+using std::vector;
+#import <list>
+using std::list;
+
+#import <iostream>
+using std::cout;
+using std::cerr;
+using std::endl;
+
+#import <fstream>
+using std::ofstream;
+
+#import <boost/foreach.hpp>
+#define foreach         BOOST_FOREACH
+#define reverse_foreach BOOST_REVERSE_FOREACH
+
+extern bool bVerbose;
+
+#else
+#error "This is a C++ program"
+#endif
